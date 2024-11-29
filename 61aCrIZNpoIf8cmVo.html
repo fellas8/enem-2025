@@ -1,0 +1,208 @@
+<html><head><base href="https://websim.example.com"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrepEnem 2025 - Estudos Intensivos</title>
+<style>
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --light: #ecf0f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--light);
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  background: var(--secondary);
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%233498db"/></svg>');
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.temas-principais {
+  padding: 2rem;
+}
+
+.tema-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.questoes-2024 {
+  padding: 2rem;
+  background: var(--light);
+}
+
+.questao {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cronograma {
+  padding: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background: var(--secondary);
+  animation: progress 2s ease-in-out forwards;
+}
+
+@keyframes progress {
+  to { width: 75%; }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>PrepEnem 2025</h1>
+  <p>Sua preparação intensiva para o ENEM 2025 começa aqui!</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#temas">Temas 2025</a></li>
+    <li><a href="#questoes">Questões 2024</a></li>
+    <li><a href="#cronograma">Cronograma</a></li>
+    <li><a href="#simulados">Simulados</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h2>Prepare-se para o ENEM 2025</h2>
+  <p>Material atualizado com base nas últimas tendências e análise do ENEM 2024</p>
+</section>
+
+<section class="temas-principais" id="temas">
+  <h2>Temas Principais para 2025</h2>
+  
+  <div class="tema-card">
+    <h3>Redação</h3>
+    <ul>
+      <li>Inteligência Artificial e Mercado de Trabalho</li>
+      <li>Sustentabilidade e Economia Circular</li>
+      <li>Saúde Mental na Era Digital</li>
+      <li>Fake News e Democracia</li>
+    </ul>
+  </div>
+
+  <div class="tema-card">
+    <h3>Ciências da Natureza</h3>
+    <ul>
+      <li>Energias Renováveis</li>
+      <li>Biotecnologia</li>
+      <li>Mudanças Climáticas</li>
+      <li>Pandemia e Saúde Global</li>
+    </ul>
+  </div>
+
+  <div class="tema-card">
+    <h3>Matemática</h3>
+    <ul>
+      <li>Análise de Dados e Estatística</li>
+      <li>Matemática Financeira</li>
+      <li>Geometria Espacial</li>
+      <li>Probabilidade</li>
+    </ul>
+  </div>
+</section>
+
+<section class="questoes-2024" id="questoes">
+  <h2>Questões do ENEM 2024</h2>
+  
+  <div class="questao">
+    <h3>Questão 1 - Linguagens</h3>
+    <p>No ENEM 2024, uma das questões abordou o impacto das redes sociais na comunicação contemporânea...</p>
+    <button onclick="mostrarResposta(1)">Ver Resolução</button>
+    <div id="resposta1" style="display: none;">
+      <p>Resolução detalhada aqui...</p>
+    </div>
+  </div>
+
+  <div class="questao">
+    <h3>Questão 2 - Matemática</h3>
+    <p>Uma questão sobre análise de dados relacionada ao crescimento do e-commerce durante a pandemia...</p>
+    <button onclick="mostrarResposta(2)">Ver Resolução</button>
+    <div id="resposta2" style="display: none;">
+      <p>Resolução detalhada aqui...</p>
+    </div>
+  </div>
+</section>
+
+<section class="cronograma" id="cronograma">
+  <h2>Cronograma de Estudos</h2>
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+  <p>Progresso atual do plano de estudos: 75%</p>
+</section>
+
+<script>
+function mostrarResposta(id) {
+  const resposta = document.getElementById(`resposta${id}`);
+  if (resposta.style.display === 'none') {
+    resposta.style.display = 'block';
+  } else {
+    resposta.style.display = 'none';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Simulação de carregamento de progresso
+  const progress = document.querySelector('.progress');
+  progress.style.width = '75%';
+});
+</script>
+
+</body></html>
